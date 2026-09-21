@@ -1,0 +1,1023 @@
+/* ==========================================================================
+   LAYOUT OFICIAL E FIEL DO G1 (globo.com) - MATÉRIA JORNALÍSTICA
+   ========================================================================== */
+
+:root {
+    --g1-red: #c4170c;
+    --g1-red-dark: #a01209;
+    --text-color: #333333;
+    --title-color: #111111;
+    --subtitle-color: #555555;
+    --meta-color: #777777;
+    --border-color: #e5e5e5;
+    --font-primary: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: #ffffff;
+    line-height: 1.65;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ==========================================================================
+   1. BARRA SUPERIOR GLOBO.COM
+   ========================================================================== */
+.globo-topbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ededed;
+    height: 42px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.globo-topbar .container {
+    max-width: 1180px;
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.globo-brands {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.brand-item {
+    text-transform: lowercase;
+}
+
+.brand-item.globo { color: #0669de; font-size: 15px; font-weight: 800; }
+.brand-item.g1 { color: #c4170c; font-weight: 900; }
+.brand-item.ge { color: #06aa48; font-weight: 800; }
+.brand-item.gshow { color: #ff6700; font-weight: 800; }
+.brand-item.globoplay { color: #fb0434; font-weight: 800; }
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   2. HEADER G1 PRINCIPAL
+   ========================================================================== */
+.g1-header {
+    background-color: var(--g1-red);
+    color: #ffffff;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.g1-header .container {
+    max-width: 1180px;
+}
+
+.g1-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--font-primary);
+}
+
+.menu-icon {
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background: #ffffff;
+    position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: #ffffff;
+    left: 0;
+}
+
+.menu-icon::before { top: -5px; }
+.menu-icon::after { bottom: -5px; }
+
+.g1-logo-container {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.g1-logo {
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.editorial-tag {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    opacity: 0.95;
+    border-left: 1px solid rgba(255,255,255,0.4);
+    padding-left: 12px;
+    text-transform: uppercase;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.18);
+    border-radius: 4px;
+    padding: 5px 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    width: 120px;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* MENU GAVETA MOBILE */
+.mobile-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 270px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 10001;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+}
+
+.mobile-drawer.active {
+    left: 0;
+}
+
+.drawer-header {
+    background-color: var(--g1-red);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+}
+
+.drawer-logo {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.drawer-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.drawer-body {
+    padding: 20px 16px;
+}
+
+.drawer-section-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.drawer-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.drawer-nav-list a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO DA MATÉRIA G1
+   ========================================================================== */
+.g1-article-container {
+    margin-top: 24px;
+    margin-bottom: 60px;
+}
+
+.article-header {
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 18px;
+}
+
+.article-category {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--g1-red);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+}
+
+.article-title {
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--title-color);
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+}
+
+.article-subtitle {
+    font-size: 19px;
+    line-height: 1.45;
+    color: var(--subtitle-color);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.article-meta {
+    font-size: 12px;
+    color: var(--meta-color);
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.author-info strong {
+    color: #222;
+}
+
+.date-info {
+    color: #666;
+}
+
+/* BARRA DE COMPARTILHAMENTO */
+.share-bar {
+    margin-top: 16px;
+}
+
+.share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #444;
+    cursor: pointer;
+}
+
+.share-btn.whatsapp {
+    background-color: #25D366;
+    color: #ffffff;
+    border-color: #25D366;
+}
+
+.share-btn.facebook {
+    background-color: #1877F2;
+    color: #ffffff;
+    border-color: #1877F2;
+}
+
+.share-btn.twitter {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+/* ==========================================================================
+   4. CORPO DO ARTIGO & PLAYER DE VÍDEO G1
+   ========================================================================== */
+.article-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    color: #292929;
+}
+
+.article-content .lead-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #111111;
+    margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   BARRA DE VAGAS (SOBRE O VÍDEO)
+   ========================================================================== */
+.g1-scarcity-bar {
+    margin: 20px 0 16px;
+}
+
+.scarcity-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 8px;
+    font-family: var(--font-primary);
+}
+
+.scarcity-text strong {
+    color: var(--g1-red);
+    font-weight: 700;
+}
+
+.scarcity-progress-track {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.scarcity-progress-fill {
+    height: 100%;
+    background-color: var(--g1-red);
+    border-radius: 4px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* BLOCO DO VÍDEO G1 (PADRÃO GLOBO PLAY / VTURB) */
+.g1-video-block {
+    margin: 28px 0 32px;
+}
+
+vturb-smartplayer {
+    border-radius: 4px;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+.vturb-player-placeholder {
+    background-color: transparent !important;
+}
+
+.g1-player-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    line-height: 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.g1-player-wrapper video {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    background-color: #000000;
+}
+
+.g1-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.g1-play-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.g1-play-circle {
+    width: 72px;
+    height: 72px;
+    background-color: var(--g1-red);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+.g1-play-circle svg {
+    margin-left: 4px;
+}
+
+.g1-play-label {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.g1-video-caption {
+    padding: 8px 0;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.caption-title {
+    display: block;
+    color: #444;
+}
+
+.caption-credit {
+    font-size: 11px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   GALERIA DE FOTOS E RESULTADOS G1
+   ========================================================================== */
+.article-content h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111111;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.g1-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 20px 0 28px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.g1-gallery-item {
+    background: #ffffff;
+    margin: 0;
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.g1-gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+.g1-gallery-item figcaption {
+    padding: 6px 2px 2px;
+    font-size: 11px;
+    color: #666;
+    line-height: 1.35;
+    border-bottom: none;
+}
+
+.caption-title {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+@media (max-width: 600px) {
+    .g1-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .g1-gallery-item {
+        padding: 5px;
+    }
+
+    .g1-gallery-item img {
+        height: 150px;
+    }
+
+    .g1-gallery-item figcaption {
+        font-size: 10px;
+        line-height: 1.25;
+    }
+}
+
+/* ==========================================================================
+   CHAMADA DE AÇÃO ELEGANTE E INTEGRADA AO G1
+   ========================================================================== */
+.g1-cta-clean {
+    margin: 32px auto 40px;
+    text-align: center;
+    max-width: 620px;
+}
+
+.g1-cta-intro {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    color: #222222 !important;
+    margin-bottom: 18px !important;
+}
+
+.g1-btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--g1-red);
+    color: #ffffff !important;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 16px 28px;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(196, 23, 12, 0.3);
+    transition: background-color 0.2s, transform 0.15s;
+    text-decoration: none;
+    width: 100%;
+    max-width: 480px;
+}
+
+.g1-btn-action:hover {
+    background-color: var(--g1-red-dark);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. SEÇÃO OFICIAL DE COMENTÁRIOS GLOBO / G1
+   ========================================================================== */
+.g1-comments-section {
+    border-top: 2px solid #222222;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+.g1-comments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.g1-comments-header h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #111111;
+}
+
+.comments-rules-link {
+    font-size: 11px;
+    color: #888;
+}
+
+.g1-comment-form textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.g1-comment-form textarea:focus {
+    border-color: var(--g1-red);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+.btn-submit-comment {
+    background-color: var(--g1-red);
+    color: #ffffff;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.comments-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.comment-row {
+    display: flex;
+    gap: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 14px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment-data {
+    flex: 1;
+}
+
+.comment-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.comment-user strong {
+    font-size: 14px;
+    color: #111;
+}
+
+.user-verified {
+    font-size: 10px;
+    background-color: #e6f4ea;
+    color: #137333;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.time-ago {
+    font-size: 11px;
+    color: #888;
+}
+
+.comment-body {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
+    margin-bottom: 6px !important;
+}
+
+.comment-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.comment-reply-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #f4f4f4;
+    margin-left: 10px;
+}
+
+.reply-avatar {
+    width: 34px !important;
+    height: 34px !important;
+}
+
+.avatar-letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0669de;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.like-btn, .reply-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.like-btn:hover, .like-btn.liked {
+    color: var(--g1-red);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   6. RODAPÉ OFICIAL G1 / GLOBO
+   ========================================================================== */
+.globo-footer {
+    background-color: #1a1a1a;
+    color: #999999;
+    padding: 36px 0 50px;
+    font-size: 12px;
+}
+
+.globo-footer .container {
+    max-width: 1180px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.g1-footer-brand {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--g1-red);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-transform: lowercase;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.advertorial-disclaimer {
+    max-width: 680px;
+    margin: 8px auto 0;
+    font-size: 11px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
+    .globo-brands .brand-item:not(.g1):not(.globo) {
+        display: none;
+    }
+
+    .account-link span {
+        display: none;
+    }
+
+    .article-title {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .article-subtitle {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .article-content .lead-text {
+        font-size: 18px;
+    }
+
+    .article-content p {
+        font-size: 17px;
+    }
+
+    .g1-btn-action {
+        font-size: 15px;
+        padding: 14px 18px;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   8. NOTIFICAÇÃO FLUTUANTE DE COMPRA AO VIVO (PROVA SOCIAL)
+   ========================================================================== */
+.live-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #10b981;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 380px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    font-family: var(--font-primary);
+}
+
+.live-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.toast-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #edf2f7;
+}
+
+.toast-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.toast-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-bottom: 2px;
+}
+
+.toast-title span:first-child {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a202c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.toast-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: #047857;
+    background-color: #d1fae5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.toast-action {
+    font-size: 12px;
+    color: #4a5568;
+    line-height: 1.35;
+    margin: 0 0 2px 0;
+}
+
+.toast-action strong {
+    color: #1a202c;
+    font-weight: 600;
+}
+
+.toast-time {
+    font-size: 11px;
+    color: #a0aec0;
+    display: block;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: #a0aec0;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.toast-close:hover {
+    color: #4a5568;
+}
+
+@media (max-width: 480px) {
+    .live-toast {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: none;
+    }
+}

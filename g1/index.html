@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Cloacker</title>
+    
+    <!-- Meta Tags para Redes Sociais / WhatsApp -->
+    <meta property="og:title" content="Papa Francisco revela oração sagrada de São Miguel Arcanjo para destravar a prosperidade">
+    <meta property="og:description" content="Em revelação histórica, Santo Padre compartilha prece guardada nos arquivos do Vaticano que tem transformado a vida financeira de fiéis; assista.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Google Fonts & Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- VTurb / ConverteAI Preload -->
+    <link rel="preload" href="https://scripts.converteai.net/8a9f4d6a-f7e5-4ef1-addf-4e45f2d12c94/players/6ab1bc97b1aaf52a0f283a52/v4/player.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR GLOBO.COM -->
+    <header class="globo-topbar">
+        <div class="container topbar-content">
+            <div class="globo-brands">
+                <a href="#cta-link" class="brand-item globo">globo.com</a>
+                <a href="#cta-link" class="brand-item g1 active">g1</a>
+                <a href="#cta-link" class="brand-item ge">ge</a>
+                <a href="#cta-link" class="brand-item gshow">gshow</a>
+                <a href="#cta-link" class="brand-item globoplay">globoplay</a>
+            </div>
+            <div class="user-account">
+                <a href="#cta-link" class="account-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <span>Conta Globo</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEADER G1 PRINCIPAL OFICIAL -->
+    <header class="g1-header">
+        <div class="container g1-header-inner">
+            <div class="left-nav">
+                <button class="menu-btn" id="menuToggleBtn" aria-label="Menu" onclick="toggleMobileMenu()">
+                    <span class="menu-icon"></span>
+                    <span class="menu-text">MENU</span>
+                </button>
+                <div class="g1-logo-container">
+                    <a href="#cta-link" class="g1-logo">g1</a>
+                    <span class="editorial-tag">FÉ & SOCIEDADE</span>
+                </div>
+            </div>
+            <div class="right-nav">
+                <div class="search-box">
+                    <input type="text" placeholder="BUSCAR NO G1">
+                    <button class="search-btn" aria-label="Buscar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU GAVETA MOBILE -->
+    <div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <span class="drawer-logo">g1</span>
+            <button class="drawer-close" onclick="toggleMobileMenu()">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <div class="drawer-section-title">EDITORIAS</div>
+            <ul class="drawer-nav-list">
+                <li><a href="#cta-link" onclick="toggleMobileMenu()">Fé e Sociedade</a></li>
+                <li><a href="#cta-link" onclick="toggleMobileMenu()">Economia & Prosperidade</a></li>
+                <li><a href="#cta-link" onclick="toggleMobileMenu()">Últimas Notícias</a></li>
+                <li><a href="#cta-link" onclick="toggleMobileMenu()">Vídeos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL (ESTRUTURA EXATA DO G1) -->
+    <main class="g1-article-container container">
+        
+        <!-- CABEÇALHO DO ARTIGO -->
+        <article class="article-header">
+            <div class="article-category">FÉ E SOCIEDADE</div>
+            
+            <h1 class="article-title">
+                Papa Francisco revela oração sagrada de São Miguel Arcanjo para quebrar amarras da escassez e destravar a prosperidade
+            </h1>
+            
+            <h2 class="article-subtitle">
+                Em pronunciamento histórico, Santo Padre compartilha prece guardada sob custódia no Vaticano que tem gerado relatos de quitação de dívidas e fartura no lar; assista ao vídeo oficial.
+            </h2>
+
+            <div class="article-meta">
+                <div class="author-info">
+                    <span class="author-name">Por <strong>Redação G1</strong> — Vaticano</span>
+                </div>
+                <div class="date-info">
+                    <span id="publish-date">21/09/2026 10h15</span> &bull; 
+                    <span class="updated-time">Atualizado <span id="relative-update">há 18 minutos</span></span>
+                </div>
+            </div>
+
+            <!-- BARRA DE COMPARTILHAMENTO G1 -->
+            <div class="share-bar">
+                <div class="share-buttons">
+                    <a href="https://api.whatsapp.com/send?text=Veja%20essa%20materia%20do%20G1" target="_blank" class="share-btn whatsapp" title="Compartilhar no WhatsApp">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>Compartilhar</span>
+                    </a>
+                    <a href="#cta-link" class="share-btn facebook" title="Compartilhar no Facebook">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.667 5H18V0h-3.889C10.667 0 9 1.667 9 4.667V8z"/></svg>
+                    </a>
+                    <a href="#cta-link" class="share-btn twitter" title="Compartilhar no Twitter">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <button class="share-btn copy-link" id="copyBtn" onclick="copyPageLink()">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"></path></svg>
+                        <span id="copyText">Copiar link</span>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- CORPO DA MATÉRIA -->
+        <article class="article-content">
+            
+            <!-- PARÁGRAFO LEAD JORNALÍSTICO REAL DO G1 -->
+            <p class="lead-text">
+                O <strong>Papa Francisco</strong> tornou pública uma antiga e poderosa oração de intercessão de <strong>São Miguel Arcanjo</strong>, guardada por séculos sob a tutela da Igreja. A prece, que tem sido apontada por teólogos e historiadores como uma chave espiritual para o rompimento de ciclos de escassez e destravamento financeiro, já começou a ser praticada por milhares de pessoas no Brasil e no mundo.
+            </p>
+            <p>
+                Segundo o relato oficial divulgado, a oração atua diretamente na quebra de amarras espirituais, afastando a angústia provocada por cobranças, desemprego e perdas materiais inesperadas. Veja abaixo o vídeo com a apresentação completa e as orientações para realizar a oração em sua casa:
+            </p>
+
+            <!-- BARRA DE VAGAS LIMITADAS -->
+            <div class="g1-scarcity-bar" id="scarcityBar">
+                <div class="scarcity-text">
+                    Restam apenas <strong id="spotsCount">25</strong> de 1.000 vagas
+                </div>
+                <div class="scarcity-progress-track">
+                    <div class="scarcity-progress-fill" id="spotsProgress" style="width: 97.5%;"></div>
+                </div>
+            </div>
+
+            <!-- VÍDEO NO PADRÃO OFICIAL VTURB SMARTPLAYER -->
+            <div class="g1-video-block">
+                <vturb-smartplayer id="vid-6ab1bc97b1aaf52a0f283a52" style="display: block; margin: 0 auto; width: 100%;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background: transparent;"></div></vturb-smartplayer>
+                <script type="text/javascript">
+                    var s=document.createElement("script");
+                    s.src="https://scripts.converteai.net/8a9f4d6a-f7e5-4ef1-addf-4e45f2d12c94/players/6ab1bc97b1aaf52a0f283a52/v4/player.js",
+                    s.async=!0,document.head.appendChild(s);
+                </script>
+                
+                <figcaption class="g1-video-caption">
+                    <span class="caption-title">Papa Francisco revela oração sagrada de São Miguel Arcanjo para abertura de caminhos</span>
+                    <span class="caption-credit">Vídeo: Reprodução / Vatican News</span>
+                </figcaption>
+            </div>
+
+            <!-- TEXTO CONTINUADO NO PADRÃO G1 -->
+            <p>
+                A prática consiste em uma invocação de 3 minutos realizada pela manhã, direcionada a colocar a espada de São Miguel Arcanjo à frente da vida financeira, do trabalho e do lar daquele que crê.
+            </p>
+
+            <!-- SEÇÃO DE RESULTADOS E DEPOIMENTOS REAIS -->
+            <h2>Relatos de transformação: fiéis registram bênçãos e conquistas financeiras</h2>
+            
+            <p>
+                Por todo o país, milhares de lares que viviam momentos de incerteza e dívidas relatam transformações profundas após a prática da oração. Nas redes sociais e canais de atendimento, fiéis compartilham registros comoventes de cura, abundância e conquistas materiais alcançadas sob a intercessão de São Miguel Arcanjo:
+            </p>
+
+            <div class="g1-gallery-grid">
+                <figure class="g1-gallery-item">
+                    <img src="images/depoimento-dinheiro-senhora.jpg" alt="Dona Maria exibe valor recebido após a oração" loading="lazy">
+                    <figcaption>
+                        <span class="caption-title">Dona Maria exibe valor recebido após o destravamento financeiro proporcionado pela oração de São Miguel Arcanjo.</span>
+                        <span class="caption-credit">Foto: Reprodução / Arquivo Pessoal</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="g1-gallery-item">
+                    <img src="images/depoimento-carro-vitoria.jpg" alt="Fiel conquista veículo próprio após período de dificuldades" loading="lazy">
+                    <figcaption>
+                        <span class="caption-title">Após anos de dificuldades financeiras, fiel registra a conquista de veículo novo após a jornada de fé.</span>
+                        <span class="caption-credit">Foto: Reprodução / Arquivo Pessoal</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="g1-gallery-item">
+                    <img src="images/depoimento-abundancia-casal.jpg" alt="Casal celebra proteção e fartura no lar" loading="lazy">
+                    <figcaption>
+                        <span class="caption-title">Casal celebra a restauração financeira e harmonia familiar após os dias de oração diária.</span>
+                        <span class="caption-credit">Foto: Reprodução / Arquivo Pessoal</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="g1-gallery-item">
+                    <img src="images/depoimento-cura-hospital.jpg" alt="Família registra cura e livramento hospitalar" loading="lazy">
+                    <figcaption>
+                        <span class="caption-title">Família comemora vitória na saúde e proteção durante momento delicado no hospital.</span>
+                        <span class="caption-credit">Foto: Reprodução / Arquivo Pessoal</span>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- CHAMADA DE AÇÃO ELEGANTE E INTEGRADA AO G1 -->
+            <div class="g1-cta-clean" id="cta-box">
+                <p class="g1-cta-intro">
+                    O guia oficial com as palavras sagradas originais e o áudio da <strong>Oração de São Miguel Arcanjo</strong> foi disponibilizado na íntegra para os fiéis:
+                </p>
+                <a href="https://lastlink.com/p/C29BA9D3C/checkout-payment/" class="g1-btn-action checkout-link" target="_blank" rel="noopener">
+                    <span>Acessar o Guia e Áudio da Oração</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+
+            <!-- SEÇÃO OFICIAL DE COMENTÁRIOS GLOBO / G1 -->
+            <section class="g1-comments-section" id="comentarios">
+                <div class="g1-comments-header">
+                    <h3>COMENTÁRIOS (<span id="comment-count">94</span>)</h3>
+                    <div class="comments-rules-link">Os comentários são de responsabilidade exclusiva de seus autores.</div>
+                </div>
+
+                <!-- FORMULÁRIO DE COMENTÁRIO -->
+                <div class="g1-comment-form">
+                    <textarea id="userComment" placeholder="Escreva seu comentário ou testemunho..." rows="2"></textarea>
+                    <div class="form-footer">
+                        <button type="button" class="btn-submit-comment" onclick="submitUserComment()">Publicar</button>
+                    </div>
+                </div>
+
+                <!-- LISTA DE COMENTÁRIOS DO PROJETO QUIZ -->
+                <div class="comments-feed" id="commentsList">
+                    
+                    <!-- Comentário 1: Frei Gilson -->
+                    <div class="comment-row">
+                        <img src="images/frei-gilson.png" alt="Frei Gilson" class="user-avatar">
+                        <div class="comment-data">
+                            <div class="comment-user">
+                                <strong>Frei Gilson/Som Do Monte</strong>
+                                <span class="user-verified">Verificado</span>
+                                <span class="time-ago">há 47 minutos</span>
+                            </div>
+                            <p class="comment-body">A Oração Sagrada de São Miguel Arcanjo e as frequências divinas têm sido instrumento de milagres em tantos lares. Já acompanhei pessoas que encontraram cura, reconciliação e até libertação de males antigos, simplesmente rezando e ouvindo. O som age com poder no espírito.</p>
+                            <div class="comment-buttons">
+                                <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">2.587</span>)</button>
+                                <button class="reply-btn">Responder</button>
+                            </div>
+
+                            <!-- Resposta 1 -->
+                            <div class="comment-reply-row">
+                                <img src="images/mulher-enrolado.jpg" alt="Helena Souza" class="user-avatar reply-avatar">
+                                <div class="comment-data">
+                                    <div class="comment-user">
+                                        <strong>Helena Souza</strong>
+                                        <span class="time-ago">há 38 minutos</span>
+                                    </div>
+                                    <p class="comment-body">@FreiGilson, comecei a ouvir ontem e hoje acordei sentindo uma paz que nunca havia experimentado. 🙌✨</p>
+                                    <div class="comment-buttons">
+                                        <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">53</span>)</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comentário 2: Padre Paulo Ricardo -->
+                    <div class="comment-row">
+                        <img src="images/padre-paulo-ricardo.png" alt="Padre Paulo Ricardo" class="user-avatar">
+                        <div class="comment-data">
+                            <div class="comment-user">
+                                <strong>Padre Paulo Ricardo</strong>
+                                <span class="user-verified">Verificado</span>
+                                <span class="time-ago">há 1 hora</span>
+                            </div>
+                            <p class="comment-body">Posso afirmar com toda convicção: essas orações e frequências são um canal de milagres. Vi pessoas se transformarem profundamente ao escutá-las com abertura. O som vibra onde as palavras não chegam. Que ninguém perca essa graça!</p>
+                            <div class="comment-buttons">
+                                <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">1.347</span>)</button>
+                                <button class="reply-btn">Responder</button>
+                            </div>
+
+                            <!-- Resposta 2 -->
+                            <div class="comment-reply-row">
+                                <img src="images/casal-idoso.jpg" alt="Antônio Martins" class="user-avatar reply-avatar">
+                                <div class="comment-data">
+                                    <div class="comment-user">
+                                        <strong>Antônio Martins</strong>
+                                        <span class="time-ago">há 29 minutos</span>
+                                    </div>
+                                    <p class="comment-body">@PadrePauloRicardo, o senhor tem razão. Tenho 68 anos e estava muito abatido, sem esperança. Depois que comecei a escutar todos os dias, ganhei ânimo novo. Até meus netos perceberam a mudança em mim.</p>
+                                    <div class="comment-buttons">
+                                        <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">45</span>)</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comentário 3: Padre Chrystian Shankar -->
+                    <div class="comment-row">
+                        <img src="images/padre-chrystian.png" alt="Padre Chrystian Shankar" class="user-avatar">
+                        <div class="comment-data">
+                            <div class="comment-user">
+                                <strong>Padre Chrystian Shankar</strong>
+                                <span class="user-verified">Verificado</span>
+                                <span class="time-ago">há 1 hora</span>
+                            </div>
+                            <p class="comment-body">Eu vivi exatamente o que está sendo mostrado nesse vídeo. A Oração Sagrada não é apenas um áudio, é uma experiência espiritual real. Quem escutar com fé vai perceber a mudança. Assista até o final e se permita viver isso!</p>
+                            <div class="comment-buttons">
+                                <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">751</span>)</button>
+                                <button class="reply-btn">Responder</button>
+                            </div>
+
+                            <!-- Resposta 3 -->
+                            <div class="comment-reply-row">
+                                <img src="images/mulher-vestido.png" alt="Joeima Santana" class="user-avatar reply-avatar">
+                                <div class="comment-data">
+                                    <div class="comment-user">
+                                        <strong>Joeima Santana</strong>
+                                        <span class="time-ago">há 1 hora</span>
+                                    </div>
+                                    <p class="comment-body">@PadreChrystianShankar no final eu só conseguia chorar. Foi muito forte escutar isso 😢 Obrigada por confirmar aquilo que senti!</p>
+                                    <div class="comment-buttons">
+                                        <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">15</span>)</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comentário 4: Padre Fábio De Melo -->
+                    <div class="comment-row">
+                        <img src="images/padre-fabio-de-melo.png" alt="Padre Fábio De Melo" class="user-avatar">
+                        <div class="comment-data">
+                            <div class="comment-user">
+                                <strong>Padre Fábio De Melo</strong>
+                                <span class="user-verified">Verificado</span>
+                                <span class="time-ago">há 1 hora</span>
+                            </div>
+                            <p class="comment-body">Essa oração tocou meu coração de uma forma que não sei explicar. É como se a bênção alcançasse um lugar profundo dentro da gente. Espero que mais pessoas tenham a oportunidade de ouvir isso. É forte demais.</p>
+                            <div class="comment-buttons">
+                                <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">568</span>)</button>
+                                <button class="reply-btn">Responder</button>
+                            </div>
+
+                            <!-- Resposta 4 -->
+                            <div class="comment-reply-row">
+                                <img src="images/mulher-jaleco.png" alt="Clarice Silva" class="user-avatar reply-avatar">
+                                <div class="comment-data">
+                                    <div class="comment-user">
+                                        <strong>Clarice Silva</strong>
+                                        <span class="time-ago">há 1 hora</span>
+                                    </div>
+                                    <p class="comment-body">@FabioDeMelo meu pai chorou enquanto ouvia a oração. Ele estava afastado de Deus há muitos anos. Hoje ficou ouvindo o áudio inteiro em silêncio 🙏</p>
+                                    <div class="comment-buttons">
+                                        <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">15</span>)</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comentário 5: Maria De Fátima (Foto única: senhora-idosa.jpg) -->
+                    <div class="comment-row">
+                        <img src="images/senhora-idosa.jpg" alt="Maria De Fátima" class="user-avatar">
+                        <div class="comment-data">
+                            <div class="comment-user">
+                                <strong>Maria De Fátima</strong>
+                                <span class="time-ago">há 1 hora</span>
+                            </div>
+                            <p class="comment-body">Eu já estava conformada com a solidão e as contas atrasadas, mas depois de tantas recomendações, decidi escutar a oração. Em pouco tempo, portas de trabalho se abriram e meu filho voltou a me procurar. Foi um presente de Deus!</p>
+                            <div class="comment-buttons">
+                                <button class="like-btn" onclick="likeComment(this)">👍 Curtir (<span class="like-count">66</span>)</button>
+                                <button class="reply-btn">Responder</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <!-- RODAPÉ PADRÃO GLOBO / G1 -->
+    <footer class="globo-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="g1-footer-brand">g1</span>
+            </div>
+            <div class="footer-links">
+                <a href="#cta-link">sobre o g1</a>
+                <a href="#cta-link">política de privacidade</a>
+                <a href="#cta-link">termos de uso</a>
+                <a href="#cta-link">anuncie conosco</a>
+                <a href="#cta-link">fale conosco</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Globo Comunicação e Participações S.A. Todos os direitos reservados.</p>
+                <p class="advertorial-disclaimer">Este conteúdo é um informe publicitário sobre desenvolvimento espiritual e bem-estar. Os resultados individuais dependem da fé e dedicação de cada pessoa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- NOTIFICAÇÃO FLUTUANTE DE COMPRA AO VIVO (PROVA SOCIAL) -->
+    <div class="live-toast" id="liveToast">
+        <img src="images/senhora-idosa.jpg" alt="Comprador" id="toastAvatar" class="toast-avatar">
+        <div class="toast-content">
+            <div class="toast-title">
+                <span id="toastName">Maria de Fátima (São Paulo, SP)</span>
+                <span class="toast-badge">✓ Compra confirmada</span>
+            </div>
+            <p class="toast-action" id="toastAction">Acabou de adquirir a <strong>Oração Sagrada de São Miguel Arcanjo</strong></p>
+            <span class="toast-time" id="toastTime">Agora mesmo</span>
+        </div>
+        <button class="toast-close" onclick="closeToast()" aria-label="Fechar">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

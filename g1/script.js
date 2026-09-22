@@ -35,8 +35,8 @@ function initSpotsScarcity() {
     let startTime = localStorage.getItem(STORAGE_KEY);
     const now = Date.now();
 
-    // Se não existir ou se for mais velho que 24h, reseta
-    if (!startTime || (now - parseInt(startTime, 10)) > 24 * 60 * 60 * 1000) {
+    // Se não existir, define o horário inicial e não reinicia mais
+    if (!startTime) {
         startTime = now.toString();
         localStorage.setItem(STORAGE_KEY, startTime);
     }
@@ -76,6 +76,7 @@ function setupCheckoutLinks() {
     const links = document.querySelectorAll('.checkout-link');
     links.forEach(link => {
         link.href = CONFIG.CHECKOUT_URL;
+    });
 }
 
 function scrollToVideo(e) {

@@ -76,7 +76,22 @@ function setupCheckoutLinks() {
     const links = document.querySelectorAll('.checkout-link');
     links.forEach(link => {
         link.href = CONFIG.CHECKOUT_URL;
-    });
+}
+
+function scrollToVideo(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    const target = document.getElementById('videoSection') || document.querySelector('.g1-video-block') || document.getElementById('scarcityBar');
+    if (target) {
+        const yOffset = -70; // Espaço para o cabeçalho fixo do G1
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+        });
+    }
 }
 
 function playVslVideo() {

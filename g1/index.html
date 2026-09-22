@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Cloacker</title>
     
     <!-- Meta Tags para Redes Sociais / WhatsApp -->
@@ -161,7 +161,7 @@
             </div>
 
             <!-- VÍDEO NO PADRÃO OFICIAL VTURB SMARTPLAYER -->
-            <div class="g1-video-block">
+            <div class="g1-video-block" id="videoSection">
                 <vturb-smartplayer id="vid-6ab1bc97b1aaf52a0f283a52" style="display: block; margin: 0 auto; width: 100%;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background: transparent;"></div></vturb-smartplayer>
                 <script type="text/javascript">
                     var s=document.createElement("script");
@@ -226,7 +226,7 @@
                 <p class="g1-cta-intro">
                     O guia oficial com as palavras sagradas originais e o áudio da <strong>Oração de São Miguel Arcanjo</strong> foi disponibilizado na íntegra para os fiéis:
                 </p>
-                <a href="https://lastlink.com/p/C29BA9D3C/checkout-payment/" class="g1-btn-action checkout-link" target="_blank" rel="noopener">
+                <a href="#videoSection" class="g1-btn-action" onclick="scrollToVideo(event)">
                     <span>Acessar o Guia e Áudio da Oração</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>

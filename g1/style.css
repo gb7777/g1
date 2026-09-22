@@ -19,6 +19,13 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     font-family: var(--font-primary);
     color: var(--text-color);
@@ -26,6 +33,11 @@ body {
     line-height: 1.65;
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    touch-action: pan-y;
 }
 
 a {
@@ -41,8 +53,10 @@ img {
 
 .container {
     max-width: 760px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 16px;
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -875,6 +889,10 @@ vturb-smartplayer {
         font-size: 17px;
     }
 
+    .search-box {
+        display: none;
+    }
+
     .globo-brands .brand-item:not(.g1):not(.globo) {
         display: none;
     }
@@ -899,6 +917,15 @@ vturb-smartplayer {
 
     .article-content p {
         font-size: 17px;
+    }
+
+    .share-buttons {
+        flex-wrap: wrap;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 6px;
     }
 
     .g1-btn-action {
